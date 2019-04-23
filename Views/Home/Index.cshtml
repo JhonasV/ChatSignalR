@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+    <style>
+        .chat-messages {
+            list-style:none;
+        }
+
+        .nickname {
+            text-transform:uppercase;
+            font-weight:bold;
+            padding:2px;
+            border: 1px solid #eee;
+            margin:6px;
+            font-size:20px;
+        }
+
+        .message {
+            margin-left:5px;
+            font-size:18px;
+        }
+
+        .current-user-label {
+            font-size:25px;
+            font-weight:bold;
+            margin-right:1px;
+        }
+
+        .current-user {
+            font-weight:bold;
+            text-transform:uppercase;
+            font-size:25px;
+        }
+
+        .chat-line {
+            margin: .5rem auto;
+        }
+
+        .hide {
+            display:none;
+        }
+    </style>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+
+                    <div class="text-center row">
+                        <div class="col-12"><h1 class="display-4">Chat Room</h1></div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-center">
+                                <label class="current-user-label">Current User</label>: <span id="current-user" class="current-user">N/A</span><button id="logout" class="btn hide btn-warning">logout</button>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="chat-messages" id="chat-messages">
+
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <form  id="signin-form" class="row hide">
+                        <div class="col-6 form-group">
+                            <input id="nickName" type="text" placeholder="Insert nickname..." class="form-control" />
+                        </div>
+                        <div class="col-6 form-group">
+                            <button type="submit" class="form-control btn btn-secondary">Join Chat</button>
+                        </div>
+                    </form>
+                 
+                    <form id="chat-box-form" class="row hide">
+                        <div class="col-8 form-group">
+                            <textarea id="chatMessage" placeholder="Say something..." class="form-control"></textarea>
+                        </div>
+                        <div class="col-4 form-group">
+                            <button type="submit" class="form-control btn btn-primary">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
